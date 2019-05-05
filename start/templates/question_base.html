@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="{% static 'css/animate.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/test/questions.css'%}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="stylesheet" href="bootstrap.min.css"> -->
+    <meta charset="utf-8">
+    <title>{% block title %} {% endblock title %}</title>
+  </head>
+  <body>
+<div class="main">
+  <!-- <div class="header">
+  </div> -->
+  <div class="content">
+
+
+    <div class="about_query">
+      <h1>
+        {% block unique_question %}
+          <!-- <h1>Все, что тебе необходимо - выбрать один из представленных ответов в каждом вопросе теста</h1> -->
+
+        {% endblock unique_question %}
+      </h1>
+    </div>
+
+
+  </div>
+
+  <div class="middle animated fadeInUpBig slow">
+
+
+
+      {% block div_with_images %}
+      <!-- <div class="flex_block">
+        <img src="kandidati/1_1.png" alt="" class="normalize_size">
+      </div>
+      <div class="flex_block">
+        <img src="kandidati/1_2.jpg" alt="" class="normalize_size">
+      </div> -->
+      {% endblock div_with_images %}
+
+      {% block radio %}
+      {% endblock radio %}
+
+
+
+
+
+    <!-- <div class="info_query">
+
+
+      <div class="questions">
+        <p>huy</p>
+
+      </div>
+    </div> -->
+
+
+
+  </div>
+
+
+
+  </div>
+
+</body>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="script.js">
+
+  </script>
+</html>

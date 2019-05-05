@@ -1,0 +1,65 @@
+{% extends 'question_base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}
+Вопросы
+{% endblock title %}
+
+
+
+{% block unique_question %}
+
+Имеет ли для вас значение в какой одежде кандидат будет представлен на плакате? Рубаха и повседневная одежда, военная форма или строгий костюм?
+{% endblock unique_question %}
+
+
+{% block div_with_images %}
+
+
+<div class="flex_container ">
+
+<div class="flex_block_2">
+  <img src="{% static 'img/kandidati/2_1.jpg' %}" alt="" class="normalize_size norm_2">
+</div>
+<div class="flex_block_2">
+  <img src="{% static 'img/kandidati/2_2.jpg' %}" alt="" class="normalize_size norm_2">
+</div>
+
+<!-- </div>
+
+<div class="flex_container"> -->
+
+<div class="flex_block_2">
+  <img src="{% static 'img/kandidati/2_3.jpg' %}" alt="" class="normalize_size norm_2">
+</div>
+
+</div>
+{% endblock div_with_images %}
+
+{% block radio %}
+
+<div class="radio_box">
+
+<form class="" action="/question_3/" method="post">
+
+  {% csrf_token %}
+
+  <input type="hidden" name="login" value="{{ login }}" class="ses">
+  <div class="radio_margin">
+    <input type="hidden" name="login" value="{{ login }}" class="ses">
+    <input type="radio" name="answer_number" value="1" id="l_box1" checked>
+    <label for="l_box1"><span></span>Повседневная одежда или что-то оригинально</label>
+    <br>
+    <input type="radio" name="answer_number" value="2" id="d_box2">
+    <label for="d_box2"><span></span>Военная форма</label>
+    <br>
+    <input type="radio" name="answer_number" value="3" id="d_box3">
+    <label for="d_box3"><span></span>Строгий костюм</label>
+</div>
+  <button type="submit" name="button"class="botr">hoh</button>
+
+</form>
+</div>
+
+{% endblock radio %}

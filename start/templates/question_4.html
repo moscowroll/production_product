@@ -1,0 +1,53 @@
+{% extends 'question_base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}
+Вопросы
+{% endblock title %}
+
+
+
+{% block unique_question %}
+
+Приветствуете ли вы оригинальность слогана, как на первом плакате или чем проще, тем лучше, как на втором?
+{% endblock unique_question %}
+
+
+{% block div_with_images %}
+
+<div class="flex_container">
+
+
+<div class="flex_block">
+  <img src="{% static 'img/kandidati/4_1.jpg' %}" alt="" class="normalize_size norm_4">
+</div>
+<div class="flex_block">
+  <img src="{% static 'img/kandidati/4_2.jpg' %}" alt="" class="normalize_size norm_4">
+</div>
+
+</div>
+{% endblock div_with_images %}
+
+{% block radio %}
+<div class="radio_box">
+
+<form class="" action="/question_5/" method="post">
+
+  {% csrf_token %}
+
+  <input type="hidden" name="login" value="{{ login }}" class="ses">
+  <div class="radio_margin">
+    <input type="hidden" name="login" value="{{ login }}" class="ses">
+    <input type="radio" name="answer_number" value="1" id="l_box1" checked>
+    <label for="l_box1"><span></span>За оригинальность</label>
+    <br>
+    <input type="radio" name="answer_number" value="2" id="d_box2">
+    <label for="d_box2"><span></span>Чем проще, тем лучше</label>
+  </div>
+  <button type="submit" name="button"class="botr">hoh</button>
+
+</form>
+
+</div>
+{% endblock radio %}

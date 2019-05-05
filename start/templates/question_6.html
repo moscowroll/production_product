@@ -1,0 +1,56 @@
+{% extends 'question_base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}
+Вопросы
+{% endblock title %}
+
+
+
+{% block unique_question %}
+
+Имеет ли значение вид плаката? (Вертикальное расположение или горизонтальное расположение? Или не имеет значения?)
+{% endblock unique_question %}
+
+
+{% block div_with_images %}
+
+<div class="flex_container">
+
+
+<div class="flex_block">
+  <img src="{% static 'img/kandidati/6_1.jpg' %}" alt="" class="normalize_size photoone">
+</div>
+<div class="flex_block">
+  <img src="{% static 'img/kandidati/6_2.jpg' %}" alt="" class="normalize_size phototwo">
+</div>
+
+</div>
+{% endblock div_with_images %}
+
+{% block radio %}
+<div class="radio_box">
+
+<form class="" action="/question_7/" method="post">
+
+  {% csrf_token %}
+
+  <input type="hidden" name="login" value="{{ login }}" class="ses">
+  <div class="radio_margin">
+    <input type="hidden" name="login" value="{{ login }}" class="ses">
+    <input type="radio" name="answer_number" value="1" id="l_box1" checked>
+    <label for="l_box1"><span></span>Лучше когда плакат расположен вертикально</label>
+    <br>
+    <input type="radio" name="answer_number" value="2" id="d_box2">
+    <label for="d_box2"><span></span>Лучше когда горизонтально</label>
+    <br>
+    <input type="radio" name="answer_number" value="3" id="d_box3">
+    <label for="d_box3"><span></span>Не имеет значения</label>
+  </div>
+  <button type="submit" name="button"class="botr">hoh</button>
+
+</form>
+</div>
+
+{% endblock radio %}

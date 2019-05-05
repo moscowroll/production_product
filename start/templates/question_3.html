@@ -1,0 +1,72 @@
+{% extends 'question_base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}
+Вопросы
+{% endblock title %}
+
+
+
+{% block unique_question %}
+
+Выберете наиболее удачное расположение кандидата на плакате
+{% endblock unique_question %}
+
+
+{% block div_with_images %}
+
+<div class="flex_container">
+
+
+<div class="flex_block">
+  <img src="{% static 'img/kandidati/3_1.jpg' %}" alt="" class="normalize_size norm_3">
+</div>
+<div class="flex_block">
+  <img src="{% static 'img/kandidati/3_2.png' %}" alt="" class="normalize_size norm_3">
+</div>
+
+</div>
+
+<div class="flex_container">
+
+<div class="flex_block">
+  <img src="{% static 'img/kandidati/3_3.jpg' %}" alt="" class="normalize_size norm_3">
+</div>
+<div class="flex_block">
+  <img src="{% static 'img/kandidati/3_4.jpg' %}" alt="" class="normalize_size norm_3">
+</div>
+
+</div>
+
+{% endblock div_with_images %}
+
+{% block radio %}
+<div class="radio_box">
+
+<form class="" action="/question_4/" method="post">
+
+  {% csrf_token %}
+
+  <input type="hidden" name="login" value="{{ login }}" class="ses">
+
+  <div class="radio_margin">
+    <input type="hidden" name="login" value="{{ login }}" class="ses">
+    <input type="radio" name="answer_number" value="1" id="l_box1" checked>
+    <label for="l_box1"><span></span>Номер картинки 1</label>
+    <br>
+    <input type="radio" name="answer_number" value="2" id="d_box2">
+    <label for="d_box2"><span></span>Номер картинки 2</label>
+    <br>
+    <input type="radio" name="answer_number" value="3" id="d_box3">
+    <label for="d_box3"><span></span>Номер картинки 3</label>
+    <br>
+    <input type="radio" name="answer_number" value="4" id="d_box4">
+    <label for="d_box4"><span></span>Номер картинки 4</label>
+  </div>
+  <button type="submit" name="button"class="botr">hoh</button>
+
+</form>
+</div>
+
+{% endblock radio %}

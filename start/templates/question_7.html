@@ -1,0 +1,60 @@
+{% extends 'question_base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}
+Вопросы
+{% endblock title %}
+
+
+
+{% block unique_question %}
+
+Обратите внимание на фон (яркие цвета пестрыне или спокойные-однотонные)? Выберите ту группу плакатов, фон которых кажется вам наиболее подходящим по цветовой гамме? (3 группы яркие , пёстрые , светлые)
+{% endblock unique_question %}
+
+
+{% block div_with_images %}
+
+<div class="grid_container">
+
+  <div class="item_1">
+    <img src="{% static 'img/kandidati/7_group_1.jpg' %}" alt="" class="normalize_size last">
+  </div>
+  <div class="item_2">
+    <img src="{% static 'img/kandidati/7_group_2.jpg' %}" alt="" class="normalize_size last">
+  </div>
+  <div class="item_3">
+    <img src="{% static 'img/kandidati/7_group_3.jpg' %}" alt="" class="normalize_size last">
+  </div>
+
+</div>
+
+
+{% endblock div_with_images %}
+
+{% block radio %}
+<div class="radio_box">
+
+<form class="" action="/finish/" method="post">
+
+  {% csrf_token %}
+
+  <input type="hidden" name="login" value="{{ login }}" class="ses">
+  <div class="radio_margin">
+    <input type="hidden" name="login" value="{{ login }}" class="ses">
+    <input type="radio" name="answer_number" value="1" id="l_box1" checked>
+    <label for="l_box1"><span></span>Мне нравится цветовое решение 1й группы плакатов</label>
+    <br>
+    <input type="radio" name="answer_number" value="2" id="d_box2">
+    <label for="d_box2"><span></span>Мне нравится цветовое решение 2й группы плакатов</label>
+    <br>
+    <input type="radio" name="answer_number" value="3" id="d_box3">
+    <label for="d_box3"><span></span>Мне нравится цветовое решение 3й группы плакатов</label>
+  </div>
+  <button type="submit" name="button"class="botr">hoh</button>
+
+</form>
+</div>
+
+{% endblock radio %}

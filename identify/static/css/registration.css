@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:300');
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400');
+
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond');
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  color: #686868;
+
+  --def: #fff;
+   --inv:  #96B7C4;
+}
+
+
+.main{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+
+}
+
+
+
+.content{
+  position: relative;
+  height: 273px;
+  background-image: url('slider-bg.png');
+  background-repeat: repeat-x;
+  background-position: left;
+  /* background-size: cover; */
+  /* position: relative; */
+}
+
+
+
+.middle{
+  position: relative;
+  width: 100%;
+  height: 40%;
+  background-color: #F4F4F4;
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+/*
+.middle .info_query{
+  position: relative;
+  width: 100%;
+  height: 50%;
+  text-align: center;
+} */
+
+
+
+.middle .about_query{
+  position: absolute;
+  /* left: 50%;
+  top: 30%;
+  -webkit-transform: translate(-50%, -30%);
+  -moz-transform: translate(-50%, -30%);
+  -ms-transform: translate(-50%, -30%);
+  -o-transform: translate(-50%, -30%);
+  transform: translate(-50%, -30%); */
+  color: #404040;
+  font-family: 'Cormorant Garamond', serif;
+  width: 100%;
+  height: 50%;
+  justify-content: center;
+
+}
+
+.message h1{
+  display:table-cell;
+	vertical-align:middle;
+}
+
+.middle .about_query .message{
+  display: table;
+  position: absolute;
+  width: 400px;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+.middle .questions{
+  position:absolute;
+  top: 50%;
+  width: 100%;
+  height: 50%;
+
+  /* position: absolute;
+  left: 36%;
+  top: 80%;
+  -webkit-transform: translate(-50%, -30%);
+  -moz-transform: translate(-50%, -30%);
+  -ms-transform: translate(-50%, -30%);
+  -o-transform: translate(-50%, -30%);
+  transform: translate(-50%, -30%);
+  color: #404040;
+  font-family: 'Cormorant Garamond', serif;
+
+  width: 40%;
+  height: 50%; */
+
+}
+
+
+.middle .questions .cent{
+  position: absolute;
+  width: 400px;
+  height: 100%;
+  /* left: calc(100% -400px)%/2 ; */
+
+  left:-webkit-calc((100% - 400px)/2) ;
+  left:-moz-calc((100% - 400px)/2 );
+  left:calc((100% - 400px)/2) ;
+
+}
+
+.trash{
+  width: auto;
+  height: auto;
+  position: absolute;
+  left:-webkit-calc((100% - 250px)/2) ;
+  left:-moz-calc((100% - 250px)/2 );
+  left:calc((100% - 250px)/2) ;
+}
+
+/* все поля */
+.myfield{
+            border:1px solid #ccc;
+            border-radius:5px;
+            height:25px;
+            width:200px;
+            margin: 10px 10px 10px 0;
+}
+
+/* блок внутри форма */
+/* .field{
+  clear: both;
+  text-align:right;
+
+} */
+
+/*
+.label{
+  float:left;
+} */
+
+
+
+
+
+.field{
+  clear:both;
+  text-align:right;
+  padding-bottom: 10px;
+}
+
+label {
+  float:left;
+}
+
+
+.botr{
+  /* margin-bottom: 10px; */
+  background:#fff;
+  width:235px;
+  display:block;
+  height:33px;
+  /* padding-top:19px; */
+  border:1px solid #000;
+   margin: 10px auto;
+  font-family: 'Dosis', sans;
+  font-size: 18px;
+  font-weight:200;
+  color:#000;
+  text-transform:uppercase;
+  text-decoration:none;
+  text-align:center;
+  opacity:.8;
+  letter-spacing: 1px;
+    -webkit-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+   -moz-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+     -o-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+        transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750); /* linear */
+  cursor: pointer;
+}
+.botr:hover{
+  width:235px;
+  height:33px;
+  /* padding-top:19px; */
+  border:1px solid teal;
+  margin: 10px auto;
+  opacity:1;
+  letter-spacing: 4px;
+  -webkit-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+   -moz-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+     -o-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+        transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750); /* linear */
+}
+
+
+
+
+
+
+
+
+
+
+input[type="radio"] {
+    display:none;
+}
+input[type="radio"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    background:url("check_radio_sheet.png") left top no-repeat;
+    cursor:pointer;
+}
+input[type="radio"]:checked + label span {
+    background:url("check_radio_sheet.png") -19px top no-repeat;
+}

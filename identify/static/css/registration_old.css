@@ -1,0 +1,26 @@
+.talk_about_yourself{
+  position: absolute;
+
+  left: 50%;
+  top: 30%;
+  -webkit-transform: translate(-50%, -30%);
+  -moz-transform: translate(-50%, -30%);
+  -ms-transform: translate(-50%, -30%);
+  -o-transform: translate(-50%, -30%);
+  transform: translate(-50%, -30%);
+
+  font-family: 'Cormorant Garamond', serif;
+
+}
+
+
+.reg_form{
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  -webkit-transform: translate(-50%, -30%);
+  -moz-transform: translate(-50%, -30%);
+  -ms-transform: translate(-50%, -30%);
+  -o-transform: translate(-50%, -30%);
+  transform: translate(-50%, -30%);
+}
